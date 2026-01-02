@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0</TargetFrameworks>
+
+    <Authors>Chris Sainty</Authors>
+    <Company></Company>
+    <Copyright>Copyright 2020 (c) Chris Sainty. All rights reserved.</Copyright> 
+    <Description>A library to provide access to session storage in Blazor applications</Description>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <!-- NuGet settings -->
+    <PackageId>Blazored.SessionStorage</PackageId>
+    <PackageTags>Blazored;Blazor;Razor;Components;SessionStorage;Session Storage;ASP.NET Core;CSharp;Web</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Blazored/SessionStorage</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Blazored/SessionStorage</RepositoryUrl>
+
+    <!-- SourceLink settings -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Blazored.SessionStorage.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.1" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>
+        Blazored.SessionStorage.TestExtensions, PublicKey=00240000048000009400000006020000002400005253413100040000010001007527e122cc36dc13c695a4f43b7c2da3f631aed456ed309140c0d52262323e25d84bef7feddc8bd29cfe46ec652186cb10e059eedabf2ff000b977a2376a613dccfb092de6c243e0888db4c66a084124b2c1799bda4bbb2f70fed0382fc1cbdafa6dc0f4baccdc2cee55234f8a5ad76645c315523fee5352d9f01036e48b13e3
+      </_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>
+        Blazored.SessionStorage.Tests, PublicKey=00240000048000009400000006020000002400005253413100040000010001007527e122cc36dc13c695a4f43b7c2da3f631aed456ed309140c0d52262323e25d84bef7feddc8bd29cfe46ec652186cb10e059eedabf2ff000b977a2376a613dccfb092de6c243e0888db4c66a084124b2c1799bda4bbb2f70fed0382fc1cbdafa6dc0f4baccdc2cee55234f8a5ad76645c315523fee5352d9f01036e48b13e3
+      </_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
