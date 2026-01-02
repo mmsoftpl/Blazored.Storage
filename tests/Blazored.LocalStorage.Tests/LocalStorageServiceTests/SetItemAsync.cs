@@ -35,14 +35,14 @@ namespace Blazored.LocalStorage.Tests.LocalStorageServiceTests
         [InlineData("")]
         [InlineData("  ")]
         [InlineData(null)]
-        public void ThrowsArgumentNullException_When_KeyIsInvalid(string key)
+        public Task ThrowsArgumentNullException_When_KeyIsInvalid(string key)
         {
             // arrange / act
             const string data = "Data";
             var action = new Func<Task>(async () => await _sut.SetItemAsync(key, data));
 
             // assert
-            Assert.ThrowsAsync<ArgumentNullException>(action);
+            return Assert.ThrowsAsync<ArgumentNullException>(action);
         }
 
         [Fact]
