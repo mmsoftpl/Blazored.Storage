@@ -2,24 +2,32 @@
 
   <PropertyGroup>
     <TargetFrameworks>net10.0</TargetFrameworks>
-    <Nullable>enable</Nullable> 
-    <Description>A library to provide access to local storage in Blazor applications</Description>
+    <Nullable>enable</Nullable>     
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat> 
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <!-- NuGet settings -->
-    <PackageId>Blazored.Storage</PackageId>
-    <PackageTags>Blazored;Blazor;Razor;Components;LocalStorage;Local Storage;ASP.NET Core;CSharp;Web</PackageTags>
+    <PackageId>Blazor.Storage</PackageId>
+    <PackageTags>Blazor;Blazor;Razor;Components;LocalStorage;Local Storage;ASP.NET Core;CSharp;Web</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/mmsoftpl/Blazored.Storage</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/mmsoftpl/Blazor.Storage</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/mmsoftpl/Blazored.Storage</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mmsoftpl/Blazor.Storage</RepositoryUrl>
 
     <!-- SourceLink settings -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    
+    <Description>
+      A library to provide access to local storage in Blazor applications
+      This is a combined fork of Blazored.SessionStorage and Blazored.LocalStorage which were originally developed by Chris Sainty
+    </Description>
+    <PackageReleaseNotes>
+      5.0.0.0 2026-01-02
+      - .NET 10 release
+    </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Blazored.Storage\Blazored.Storage.csproj" />
+    <ProjectReference Include="..\Blazor.Storage\Blazor.Storage.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-# Blazored.Storage
+# Blazor.Storage
 
 This is a fork of [Blazored.SessionStorage](https://github.com/Blazored/SessionStorage) and [Blazored.LocalStorage](https://github.com/Blazored/LocalStorage) which were originally developed by [Chris Sainty](https://github.com/chrissainty)
 

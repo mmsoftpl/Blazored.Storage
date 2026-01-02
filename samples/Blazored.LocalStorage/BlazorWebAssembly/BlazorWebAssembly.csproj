@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Blazored.Storage\Blazored.Storage.csproj" />
+    <ProjectReference Include="..\..\..\src\Blazor.Storage\Blazor.Storage.csproj" />
   </ItemGroup>
 
 </Project>
