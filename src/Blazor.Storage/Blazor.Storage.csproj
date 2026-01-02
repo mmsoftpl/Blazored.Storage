@@ -21,8 +21,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     
     <Description>
-      A library to provide access to local storage in Blazor applications
-      This is a combined fork of Blazored.SessionStorage and Blazored.LocalStorage which were originally developed by Chris Sainty
+      A library to provide access to local storage in Blazor applications. This is a combined fork of Blazored.SessionStorage and Blazored.LocalStorage which were originally developed by Chris Sainty.
     </Description>
     <PackageReleaseNotes>
       5.0.0.0 2026-01-02
