@@ -1,4 +1,4 @@
-using Blazored.LocalStorage.Serialization;
+using Blazored.Storage.Serialization;
 using Newtonsoft.Json;
 
 namespace BlazorServer;

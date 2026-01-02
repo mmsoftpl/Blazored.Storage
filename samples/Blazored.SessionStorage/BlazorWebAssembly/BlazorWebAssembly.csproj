@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Blazored.SessionStorage\Blazored.SessionStorage.csproj" />
+    <ProjectReference Include="..\..\..\src\Blazored.Storage\Blazored.Storage.csproj" />
   </ItemGroup>
 
 </Project>

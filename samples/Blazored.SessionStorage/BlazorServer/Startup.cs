@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Blazored.SessionStorage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Blazored.SessionStorage.Serialization;
+using Blazored.Storage.Serialization;
 using Newtonsoft.Json;
 using System;
 

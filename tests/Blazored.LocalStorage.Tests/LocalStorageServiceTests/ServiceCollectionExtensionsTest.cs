@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using Blazored.LocalStorage.Serialization;
-using Blazored.LocalStorage.StorageOptions;
+using Blazored.Storage;
+using Blazored.Storage.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Xunit;
@@ -27,7 +27,7 @@ public class ServiceCollectionExtensionsTest
         AssertEqual(services, typeof(IStorageProvider), typeof(BrowserStorageProvider), ServiceLifetime.Scoped);
         AssertEqual(services, typeof(ILocalStorageService), typeof(LocalStorageService), ServiceLifetime.Scoped);
         AssertEqual(services, typeof(ISyncLocalStorageService), typeof(LocalStorageService), ServiceLifetime.Scoped);
-        AssertEqualConfigureOptions(services, typeof(IConfigureOptions<LocalStorageOptions>), ServiceLifetime.Singleton);
+        AssertEqualConfigureOptions(services, typeof(IConfigureOptions<StorageOptions>), ServiceLifetime.Singleton);
     }
 
     [Fact]
@@ -47,7 +47,7 @@ public class ServiceCollectionExtensionsTest
         AssertEqual(services, typeof(IStorageProvider), typeof(BrowserStorageProvider), ServiceLifetime.Singleton);
         AssertEqual(services, typeof(ILocalStorageService), typeof(LocalStorageService), ServiceLifetime.Singleton);
         AssertEqual(services, typeof(ISyncLocalStorageService), typeof(LocalStorageService), ServiceLifetime.Singleton);
-        AssertEqualConfigureOptions(services, typeof(IConfigureOptions<LocalStorageOptions>), ServiceLifetime.Singleton);
+        AssertEqualConfigureOptions(services, typeof(IConfigureOptions<StorageOptions>), ServiceLifetime.Singleton);
     }
 
 

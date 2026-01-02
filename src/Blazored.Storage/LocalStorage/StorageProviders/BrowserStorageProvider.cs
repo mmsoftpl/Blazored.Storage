@@ -2,7 +2,7 @@ using Microsoft.JSInterop;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Blazored.LocalStorage.Exceptions;
+using Blazored.Storage.Exceptions;
 
 namespace Blazored.LocalStorage;
 

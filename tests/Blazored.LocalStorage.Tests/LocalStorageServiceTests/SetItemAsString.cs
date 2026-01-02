@@ -1,8 +1,8 @@
 using System;
 using System.Text.Json;
-using Blazored.LocalStorage.JsonConverters;
-using Blazored.LocalStorage.Serialization;
-using Blazored.LocalStorage.StorageOptions;
+using Blazored.Storage.JsonConverters;
+using Blazored.Storage.Serialization;
+using Blazored.Storage;
 using Blazored.LocalStorage.TestExtensions;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -20,10 +20,10 @@ namespace Blazored.LocalStorage.Tests.LocalStorageServiceTests
 
         public SetItemAsString()
         {
-            var mockOptions = new Mock<IOptions<LocalStorageOptions>>();
+            var mockOptions = new Mock<IOptions<StorageOptions>>();
             var jsonOptions = new JsonSerializerOptions();
             jsonOptions.Converters.Add(new TimespanJsonConverter());
-            mockOptions.Setup(u => u.Value).Returns(new LocalStorageOptions());
+            mockOptions.Setup(u => u.Value).Returns(new StorageOptions());
             _serializer = new SystemTextJsonSerializer(mockOptions.Object);
             _storageProvider = new InMemoryStorageProvider();
             _sut = new LocalStorageService(_storageProvider, _serializer);

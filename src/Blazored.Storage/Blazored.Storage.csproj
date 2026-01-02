@@ -2,24 +2,20 @@
 
   <PropertyGroup>
     <TargetFrameworks>net10.0</TargetFrameworks>
-    <Nullable>enable</Nullable>
-
-    <Authors>Chris Sainty</Authors>
-    <Company>Chris Sainty</Company>
-    <Copyright>Copyright 2020 (c) Chris Sainty. All rights reserved.</Copyright> 
+    <Nullable>enable</Nullable> 
     <Description>A library to provide access to local storage in Blazor applications</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
     <!-- NuGet settings -->
-    <PackageId>Blazored.LocalStorage</PackageId>
+    <PackageId>Blazored.Storage</PackageId>
     <PackageTags>Blazored;Blazor;Razor;Components;LocalStorage;Local Storage;ASP.NET Core;CSharp;Web</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/Blazored/LocalStorage</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/mmsoftpl/Blazored.Storage</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/Blazored/LocalStorage</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mmsoftpl/Blazored.Storage</RepositoryUrl>
 
     <!-- SourceLink settings -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -37,6 +33,10 @@
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="\" />
     <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
   
   <ItemGroup>

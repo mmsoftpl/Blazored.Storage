@@ -30,15 +30,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\src\Blazored.LocalStorage\icon.png" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="bunit.core" Version="1.40.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Blazored.LocalStorage\Blazored.LocalStorage.csproj" />
+    <ProjectReference Include="..\Blazored.Storage\Blazored.Storage.csproj" />
   </ItemGroup>
 
 </Project>

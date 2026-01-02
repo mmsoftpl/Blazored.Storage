@@ -1,5 +1,5 @@
 using Blazored.LocalStorage;
-using Blazored.LocalStorage.Serialization;
+using Blazored.Storage.Serialization;
 using BlazorServer;
 using InteractiveServer.Components;
 using Microsoft.Extensions.DependencyInjection.Extensions;

@@ -1,21 +1,20 @@
-using Blazored.LocalStorage.StorageOptions;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
 
-namespace Blazored.LocalStorage.Serialization
+namespace Blazored.Storage.Serialization
 {
     internal class SystemTextJsonSerializer : IJsonSerializer
     {
         private readonly JsonSerializerOptions _options;
 
-        public SystemTextJsonSerializer(IOptions<LocalStorageOptions> options)
+        public SystemTextJsonSerializer(IOptions<StorageOptions> options)
         {
             _options = options.Value.JsonSerializerOptions;
         }
 
-        public SystemTextJsonSerializer(LocalStorageOptions localStorageOptions)
+        public SystemTextJsonSerializer(StorageOptions StorageOptions)
         {
-            _options = localStorageOptions.JsonSerializerOptions;
+            _options = StorageOptions.JsonSerializerOptions;
         }
 
         public T? Deserialize<T>(string data) 

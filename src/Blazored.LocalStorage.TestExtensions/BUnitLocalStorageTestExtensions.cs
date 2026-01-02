@@ -1,11 +1,11 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using Blazored.LocalStorage;
-using Blazored.LocalStorage.JsonConverters;
-using Blazored.LocalStorage.Serialization;
-using Blazored.LocalStorage.StorageOptions;
+using Blazored.Storage.JsonConverters;
+using Blazored.Storage.Serialization;
 using Blazored.LocalStorage.TestExtensions;
 using Microsoft.Extensions.DependencyInjection;
+using Blazored.Storage;
 
 namespace Bunit
 {
@@ -15,16 +15,16 @@ namespace Bunit
         public static ILocalStorageService AddBlazoredLocalStorage(this TestContextBase context)
             => AddBlazoredLocalStorage(context, null);
 
-        public static ILocalStorageService AddBlazoredLocalStorage(this TestContextBase context, Action<LocalStorageOptions>? configure)
+        public static ILocalStorageService AddBlazoredLocalStorage(this TestContextBase context, Action<StorageOptions>? configure)
         {
             if (context is null)
                 throw new ArgumentNullException(nameof(context));
 
-            var localStorageOptions = new LocalStorageOptions();
-            configure?.Invoke(localStorageOptions);
-            localStorageOptions.JsonSerializerOptions.Converters.Add(new TimespanJsonConverter());
+            var StorageOptions = new StorageOptions();
+            configure?.Invoke(StorageOptions);
+            StorageOptions.JsonSerializerOptions.Converters.Add(new TimespanJsonConverter());
 
-            var localStorageService = new LocalStorageService(new InMemoryStorageProvider(), new SystemTextJsonSerializer(localStorageOptions));
+            var localStorageService = new LocalStorageService(new InMemoryStorageProvider(), new SystemTextJsonSerializer(StorageOptions));
             context.Services.AddSingleton<ILocalStorageService>(localStorageService);
 
             return localStorageService;

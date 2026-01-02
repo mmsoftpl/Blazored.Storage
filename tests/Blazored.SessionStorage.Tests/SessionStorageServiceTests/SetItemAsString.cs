@@ -1,12 +1,12 @@
 using System;
 using System.Text.Json;
-using Blazored.SessionStorage.JsonConverters;
-using Blazored.SessionStorage.Serialization;
-using Blazored.SessionStorage.StorageOptions;
+using Blazored.Storage.JsonConverters;
+using Blazored.Storage;
 using Blazored.SessionStorage.TestExtensions;
 using Microsoft.Extensions.Options;
 using Moq;
 using Xunit;
+using Blazored.Storage.Serialization;
 
 namespace Blazored.SessionStorage.Tests.SessionStorageServiceTests;
 
@@ -20,10 +20,10 @@ public class SetItemAsString
 
     public SetItemAsString()
     {
-        var mockOptions = new Mock<IOptions<SessionStorageOptions>>();
+        var mockOptions = new Mock<IOptions<StorageOptions>>();
         var jsonOptions = new JsonSerializerOptions();
         jsonOptions.Converters.Add(new TimespanJsonConverter());
-        mockOptions.Setup(u => u.Value).Returns(new SessionStorageOptions());
+        mockOptions.Setup(u => u.Value).Returns(new StorageOptions());
         _serializer = new SystemTextJsonSerializer(mockOptions.Object);
         _storageProvider = new InMemoryStorageProvider();
         _sut = new SessionStorageService(_storageProvider, _serializer);
