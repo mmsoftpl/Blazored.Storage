@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssembly", "sample
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9170D7A9-70CE-48E3-88A3-F11D2983103E}"
 	ProjectSection(SolutionItems) = preProject
+		Blazored.LocalStorage.README.md = Blazored.LocalStorage.README.md
+		Blazored.SessionStorage.README.md = Blazored.SessionStorage.README.md
 		Directory.Build.props = Directory.Build.props
 		README.md = README.md
 	EndProjectSection

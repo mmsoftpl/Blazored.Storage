@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Blazored.LocalStorage.TestExtensions
 {
-    internal class InMemoryStorageProvider : IStorageProvider
+    public class InMemoryStorageProvider : IStorageProvider
     {
         private readonly Dictionary<string, string> _dataStore = new();
 
